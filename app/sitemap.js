@@ -1,5 +1,7 @@
 const BASE_URL = "https://22orbit.de";
 
+import { getAllBlogPosts } from "../src/lib/blog.js";
+
 const ROUTES = [
   "",
   "/services",
@@ -8,6 +10,7 @@ const ROUTES = [
   "/socialmediamarketing",
   "/preisliste",
   "/kontakt",
+  "/blog",
   "/faq",
   "/karriere",
   "/datenschutz",
@@ -16,10 +19,18 @@ const ROUTES = [
 ];
 
 export default function sitemap() {
-  const lastModified = new Date();
+  const now = new Date();
+  const posts = getAllBlogPosts();
 
-  return ROUTES.map((path) => ({
+  const staticUrls = ROUTES.map((path) => ({
     url: `${BASE_URL}${path || "/"}`,
-    lastModified,
+    lastModified: now,
   }));
+
+  const blogUrls = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: post.date ? new Date(post.date) : now,
+  }));
+
+  return [...staticUrls, ...blogUrls];
 }

@@ -13,20 +13,22 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "dompurify": "^3.2.6",
+    "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
     "keen-slider": "^6.8.6",
     "lottie-react": "^2.4.1",
     "motion": "^12.23.12",
     "next": "^15.0.0",
+    "next-mdx-remote": "^5.0.0",
     "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@next/eslint-plugin-next": "^15.0.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
-    "@next/eslint-plugin-next": "^15.0.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.33.0",
     "eslint-plugin-react": "^7.37.0",
