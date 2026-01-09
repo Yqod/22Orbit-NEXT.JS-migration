@@ -40,8 +40,8 @@ const Navbar = () => {
   const navItems = [
     { label: "Unser Team", href: "team-section", type: "scroll" },
     { label: "Portfolio", href: "portfolio-section", type: "scroll" },
-    { label: "Preise", href: "/preisliste", type: "route" },
     { label: "Leistungen", href: "/services", type: "route" },
+    { label: "Blog", href: "/blog", type: "route" },
     { label: "Kontakt", href: "/kontakt", type: "route" },
     ];
 

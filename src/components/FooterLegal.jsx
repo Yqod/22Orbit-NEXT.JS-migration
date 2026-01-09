@@ -104,6 +104,7 @@ const FooterLegal = () => {
               Support
             </h4>
             <ul className="space-y-2 text-[#748cab] text-sm">
+              <li><Link href="/preisliste" className="hover:text-[#f0ebd8] transition-colors">Preise</Link></li>
               <li><Link href="/faq" className="hover:text-[#f0ebd8] transition-colors">FAQ</Link></li>
               <li><a href="mailto:info@22orbit.de" className="hover:text-[#f0ebd8] transition-colors">E-Mail Support</a></li>
             </ul>
