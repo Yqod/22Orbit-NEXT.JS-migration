@@ -3,7 +3,7 @@ import { buildMetadata } from "../../src/lib/metadata.js";
 import { seoConfig } from "../../src/seo/seoConfig.js";
 
 export const metadata = buildMetadata({
-  ...seoConfig.webentwicklung,
+  ...seoConfig.webseiten,
   canonicalPath: "/webseiten",
 });
 

@@ -73,7 +73,7 @@ const Hero = () => {
 
             <div className="relative w-full overflow-hidden lg:w-5/12 lg:order-1 pt-6">
     <div className="lg:absolute lg:bottom-0 lg:left-0 -mt-24 sm:-mt-12 md:-mt-8 lg:mt-0 lg:translate-y-40 md:translate-y-32 sm:translate-y-24">
-        <img className="w-full" src="/webentwicklungWebdesignMagdeburg2(2)1.webp" alt="Webentwicklung für Magdeburg" />
+        <img className="w-full" src="/webentwicklungWebdesignMagdeburg2(2)1.webp" alt="Webdesign und Webentwicklung in Magdeburg" />
     </div>
 </div>
         </div>

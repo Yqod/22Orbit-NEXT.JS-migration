@@ -9,7 +9,7 @@ const RobertAndWoodman = () => (
 			<div className="flex-1 flex items-center justify-center z-10">
 				<img
 					src="/mockuprobert.png"
-					alt="Robert & Woodman Website Mockup"
+					alt="Mockup der Website von Robert & Woodman"
 					className="w-full max-w-[480px] object-contain"
 				/>
 			</div>

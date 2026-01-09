@@ -267,7 +267,7 @@ const Kontakt = () => {
                             Kontakt
                         </h1>
                         <p className="text-[#748cab] text-lg sm:text-xl md:text-2xl font-light max-w-4xl mx-auto">
-                            Bereit für dein nächstes digitales Projekt? Lass uns darüber sprechen!
+                            Bereit für dein nächstes digitales Projekt? Ob Webdesign, Webentwicklung, Online-Shop oder individuelle Software in Magdeburg – lass uns darüber sprechen!
                         </p>
                     </div>
 

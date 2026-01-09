@@ -16,7 +16,7 @@ const About22Orbit = () => (
         </p>
          <img
           src="astronautNachUnten.png"
-          alt="Webentwicklung für deine Stadt"
+          alt="Illustration eines Astronauten als 22Orbit Maskottchen"
           className="w-[100px] max-w-full object-contain drop-shadow-2xl mb-0 mx-auto"
           style={{ pointerEvents: "none"}}
         />
@@ -25,7 +25,7 @@ const About22Orbit = () => (
       <div className="flex-1 flex justify-end items-center hidden md:flex">
         <img
           src="AstronautLaptop.png"
-          alt="Astronaut mit Laptop"
+          alt="Illustration eines Astronauten am Laptop"
           className="w-[340px] max-w-full md:w-[400px] lg:w-[480px] object-contain drop-shadow-2xl"
           style={{ pointerEvents: "none" }}
         />

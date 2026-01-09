@@ -9,7 +9,7 @@ const Koenigskristall = () => (
       <div className="flex-1 flex items-center justify-center z-10">
         <img
           src="/koenigskmockup.png"
-          alt="KOENIGSKRISTALL Website Mockup"
+          alt="Mockup des Online-Shops KOENIGSKRISTALL"
           className="w-full max-w-[480px]   object-contain"
         />
       </div>

@@ -1,50 +1,97 @@
 export const seoConfig = {
   home: {
-    title: "Startseite | Webseiten aus Magdeburg 22Orbit",
+    title: "Webdesign & Webentwicklung in Magdeburg | 22Orbit",
     description:
-      "🚀 Moderne Webseiten, Online-Shops & Software-Lösungen von 22Orbit. Kein Baukasten, sondern maßgeschneidert für Ihr Geschäft. Schnell, mobilfreundlich, sicher.",
+      "22Orbit ist deine Webagentur aus Magdeburg für Webdesign, Webentwicklung, Online-Shops, SEO und individuelle Software. Schnell, mobilfreundlich und sicher.",
     keywords:
-      "Webentwicklung, Websites, Webseiten, Landing Page, React, Online-Shop, Web-Anwendung, Software-Entwicklung, Frontend, Backend, UI/UX Design, Webagentur, Magdeburg",
+      "Webdesign Magdeburg, Webentwicklung Magdeburg, Webseiten, Website erstellen lassen, Landing Page, Online-Shop, Webanwendung, Softwareentwicklung, SEO, Webagentur",
   },
 
   services: {
-    title: "Unsere Leistungen | 22Orbit Magdeburg",
+    title: "Leistungen | Webdesign, Entwicklung & Marketing | 22Orbit Magdeburg",
     description:
-      "Von der Website über Online-Shops bis zur individuellen Software-Lösung. Entdecken Sie unser vollständes Leistungsportfolio für digitale Projekte.",
+      "Webseiten, Online-Shops, individuelle Software und Social Media Marketing – hier findest du unsere Leistungen für deinen digitalen Erfolg.",
     keywords:
-      "Webentwicklung Services, Website Erstellung, Online-Shop Entwicklung, E-Commerce, Custom Software, Web-App Entwicklung, Responsive Design, SEO-Optimierung",
+      "Webdesign, Webentwicklung, Website Erstellung, Online-Shop Entwicklung, E-Commerce, Custom Software, Web-App Entwicklung, Responsive Design, SEO",
   },
 
+  webseiten: {
+    title: "Webdesign & Webseiten | 22Orbit Magdeburg",
+    description:
+      "Moderne Webseiten und Landing Pages aus Magdeburg: schnell, responsive und SEO-optimiert – von der Idee bis zum Launch.",
+    keywords:
+      "Webdesign Magdeburg, Webseite erstellen lassen, Landing Page, Unternehmenswebsite, Responsive Design, Performance, SEO, Next.js",
+  },
+
+  // Alias (ältere Verwendung in app/webseiten/page.jsx)
   webentwicklung: {
-    title: "Webentwicklung | Innovativ und schnell",
+    title: "Webdesign & Webseiten | 22Orbit Magdeburg",
     description:
-      "Professionelle Webentwicklung mit modernsten Technologien. Responsive, schnell und SEO-optimiert. Von der Konzeption bis zur Wartung.",
+      "Moderne Webseiten und Landing Pages aus Magdeburg: schnell, responsive und SEO-optimiert – von der Idee bis zum Launch.",
     keywords:
-      "Webentwicklung, React, Vue, JavaScript, Responsive Design, Mobile First, Progressive Web Apps, Frontend Entwicklung, Backend Entwicklung",
+      "Webdesign Magdeburg, Webseite erstellen lassen, Landing Page, Unternehmenswebsite, Responsive Design, Performance, SEO, Next.js",
   },
 
-  socialmedia: {
-    title: "Social Media Marketing | Reichweite & Wachstum",
+  socialmediamarketing: {
+    title: "Social Media Marketing | 22Orbit Magdeburg",
     description:
-      "Professionelles Social Media Marketing von 22Orbit. Strategie, Content Creation, Community Management und Paid Advertising für maximale Reichweite.",
+      "Social Media Marketing aus Magdeburg: Strategie, Content, Community und Ads – für Reichweite, Interaktion und nachhaltiges Wachstum.",
     keywords:
-      "Social Media Marketing, Instagram Marketing, Facebook Werbung, Content Creation, Community Management, Influencer Marketing, Social Media Strategie",
+      "Social Media Marketing Magdeburg, Instagram Marketing, Facebook Werbung, LinkedIn Ads, Content Creation, Community Management, Social Media Strategie",
+  },
+
+  // Alias (ältere Verwendung in app/socialmediamarketing/page.jsx)
+  socialmedia: {
+    title: "Social Media Marketing | 22Orbit Magdeburg",
+    description:
+      "Social Media Marketing aus Magdeburg: Strategie, Content, Community und Ads – für Reichweite, Interaktion und nachhaltiges Wachstum.",
+    keywords:
+      "Social Media Marketing Magdeburg, Instagram Marketing, Facebook Werbung, LinkedIn Ads, Content Creation, Community Management, Social Media Strategie",
   },
 
   software: {
-    title: "Softwareentwicklung | Individuelle Lösungen",
+    title: "Individuelle Softwareentwicklung | 22Orbit Magdeburg",
     description:
-      "Maßgeschneiderte Softwareentwicklung von 22Orbit. Web Applications, APIs, Automatisierung und AI-Lösungen für Ihr Unternehmen.",
+      "Maßgeschneiderte Softwareentwicklung aus Magdeburg: Web Apps, APIs, Automatisierung und KI-Lösungen – exakt passend zu deinem Business.",
     keywords:
-      "Softwareentwicklung, Web Applications, API Development, Automatisierung, Custom Software, AI Lösungen, Cloud Integration",
+      "Softwareentwicklung Magdeburg, Web Applications, API Entwicklung, Automatisierung, Custom Software, KI Lösungen, Cloud Integration",
   },
 
   onlineShop: {
     title: "Online-Shop Entwicklung | 22Orbit Magdeburg",
     description:
-      "Erfolgreiche E-Commerce Lösungen: Maßgeschneiderte Online-Shops mit optimaler User Experience, sicheren Zahlungssystemen und effektivem Warenwirtschaftssystem.",
+      "Erfolgreiche E-Commerce Lösungen: maßgeschneiderte Online-Shops mit starker User Experience, sicheren Payments und sauberer Technik.",
     keywords:
       "Online-Shop erstellen, E-Commerce Entwicklung, Shopify, WooCommerce, Webshop, Payment Integration, Warenwirtschaft, Verkaufsoptimierung",
+  },
+
+  preisliste: {
+    title: "Preise & Pakete | 22Orbit Magdeburg",
+    description:
+      "Transparente Preise für Webdesign, Webseiten, Online-Shops und individuelle Software. Richtwerte – jedes Projekt wird individuell kalkuliert.",
+    keywords:
+      "Preise Webdesign, Website Kosten, Online-Shop Preise, Softwareentwicklung Kosten, 22Orbit Magdeburg",
+  },
+
+  faq: {
+    title: "FAQ | 22Orbit Magdeburg",
+    description:
+      "Antworten auf häufige Fragen rund um Webdesign, Webseiten, Online-Shops, SEO und die Zusammenarbeit mit 22Orbit.",
+    keywords: "FAQ, Webdesign, Webseiten, Online-Shop, SEO, Zusammenarbeit, 22Orbit",
+  },
+
+  agb: {
+    title: "AGB | 22Orbit Magdeburg",
+    description:
+      "Allgemeine Geschäftsbedingungen (AGB) von 22Orbit – Informationen zu Leistungen, Vertragsbedingungen und Haftung.",
+    keywords: "AGB, Allgemeine Geschäftsbedingungen, 22Orbit",
+  },
+
+  karriere: {
+    title: "Karriere | 22Orbit Magdeburg",
+    description:
+      "Karriere bei 22Orbit: Werde Teil unseres Teams und arbeite an modernen Web- und Software-Projekten.",
+    keywords: "Karriere, Jobs, Webentwicklung, Softwareentwicklung, 22Orbit, Magdeburg",
   },
 
   impressum: {
@@ -64,7 +111,7 @@ export const seoConfig = {
   kontakt: {
     title: "Kontakt | 22Orbit Magdeburg",
     description:
-      "Nehmen Sie Kontakt mit 22Orbit auf. Wir beraten Sie gerne zu Ihrem Webprojekt. Telefon: +4917664637327 | Email: info@22orbit.de",
+      "Kontaktiere 22Orbit aus Magdeburg: Wir beraten dich zu Webdesign, Webentwicklung, Online-Shops und individueller Software. Telefon: +4917664637327 | E-Mail: info@22orbit.de",
     keywords:
       "Kontakt 22Orbit, Webentwicklung Anfrage, Projekt Beratung, Magdeburg Webagentur",
   },

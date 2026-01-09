@@ -9,7 +9,7 @@ const SperryPortfolio = () => (
       <div className="flex-1 flex items-center justify-center z-10">
         <img
           src="/sperrymockupneu.png"
-          alt="Sperry Website Mockup"
+          alt="Mockup der Restaurant-Website von Sperry's"
           className="w-full max-w-[480px]  object-contain"
         />
       </div>

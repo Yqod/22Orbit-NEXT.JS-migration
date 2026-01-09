@@ -31,7 +31,7 @@ const HkiPortfolio = () => (
       <div className="flex-1 flex items-center justify-center order-1 md:order-2 z-10">
         <img
           src="/hki mockup.png"
-          alt="HKI Website Mockup"
+          alt="Mockup der Website von HKI Kreativagentur"
           className="w-full max-w-[480px]  object-contain"
         />
       </div>
