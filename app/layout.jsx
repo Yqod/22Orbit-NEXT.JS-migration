@@ -8,6 +8,9 @@ export const metadata = {
   },
   description:
     "Moderne Webseiten, Online-Shops & Software-Lösungen von 22Orbit. Maßgeschneidert, schnell, mobilfreundlich und sicher.",
+  icons: {
+    icon: "/22Orbit4X4Logo.jpg",
+  },
   alternates: {
     canonical: "/",
   },
@@ -26,6 +29,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
