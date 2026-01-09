@@ -17,7 +17,7 @@ const Hero = () => {
                 <div className="h-full px-4 pt-16 pb-4 sm:px-6 lg:px-24 2xl:px-32 lg:pt-40 lg:pb-14">
                     <div className="flex flex-col justify-between flex-1 h-full pt-12 lg:pt-16">
                         <div>
-                            <h1 className="font-bebas text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-[#f0ebd8] font-bold tracking-widest drop-shadow-lg mb-6">Webseiten<br />
+                            <h1 className="font-bebas text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-[#f0ebd8] font-bold tracking-widest drop-shadow-lg mb-6">Webseiten aus Magdeburg<br />
                             
                                Die <span className="inline-block rounded-lg bg-gradient-to-r from-[#748cab] to-[#3e5c76] text-[#f0ebd8] text-black px-2 py-0.5">
                                 <RotatingText
@@ -35,7 +35,7 @@ const Hero = () => {
                             </span>
                             </h1>
                             <p className="text-[#748cab] text-lg font-light mb-2 leading-relaxed">
-                             <span className="font-bebas text-xl text-[#f0ebd8]">Webentwicklung</span> im Herzen <span className="font-bebas text-xl text-[#f0ebd8]">Magdeburgs</span>, von Landing Page bis zur indivduellen Software, alles aus einer Hand
+                             <span className="font-bebas text-xl text-[#f0ebd8]">Webentwicklung</span> im Herzen <span className="font-bebas text-xl text-[#f0ebd8]">Magdeburgs</span> – von der Landing Page bis zur individuellen Software: Webdesign, Entwicklung und SEO aus einer Hand.
                                  </p>
 
                         </div>

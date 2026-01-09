@@ -97,13 +97,13 @@ const WebseitenLeistung = () => {
                     </div>
                     <div className="flex items-center justify-center mb-12 sm:mb-16">
                         <div className="w-full max-w-4xl text-center">
-                            <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest drop-shadow-lg mb-6">
-                                Webseiten Entwicklung
-                            </h2>
+                            <h1 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest drop-shadow-lg mb-6">
+                                Webdesign & Webseiten Entwicklung
+                            </h1>
                             <p className="text-lg sm:text-xl text-[#748cab] font-light max-w-3xl mx-auto leading-relaxed">
-                                Von der ersten Idee bis zur fertigen Website – wir entwickeln moderne, 
-                                responsive und SEO-optimierte Webseiten, die dein Unternehmen perfekt repräsentieren 
-                                und deine Ziele erreichen.
+                                Von der ersten Idee bis zur fertigen Website – wir entwickeln moderne,
+                                responsive und SEO-optimierte Webseiten für Unternehmen in Magdeburg und Umgebung,
+                                die deine Marke stärken und deine Ziele erreichen.
                             </p>
                         </div>
                     </div>

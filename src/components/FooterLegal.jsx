@@ -44,7 +44,7 @@ const FooterLegal = () => {
               22Orbit
             </h3>
             <p className="text-[#748cab] text-sm leading-relaxed mb-4">
-              Deine Webagentur für moderne Webseiten, Shops und Software-Lösungen. 
+              Deine Webagentur aus Magdeburg für moderne Webseiten, Shops und Software-Lösungen. 
               Individuell, innovativ und mit Leidenschaft entwickelt.
             </p>
             <div className="text-[#748cab] text-sm">
@@ -63,11 +63,11 @@ const FooterLegal = () => {
               Services
             </h4>
             <ul className="space-y-2 text-[#748cab] text-sm">
-              <li><a  className="hover:text-[#f0ebd8] transition-colors">Landing Pages</a></li>
-              <li><a  className="hover:text-[#f0ebd8] transition-colors">Online Shops</a></li>
-              <li><a  className="hover:text-[#f0ebd8] transition-colors">Web Applications</a></li>
-              <li><a  className="hover:text-[#f0ebd8] transition-colors">Custom Software</a></li>
-              <li><a  className="hover:text-[#f0ebd8] transition-colors">Plugins</a></li>
+              <li><Link href="/webseiten" className="hover:text-[#f0ebd8] transition-colors">Landing Pages</Link></li>
+              <li><Link href="/webseiten" className="hover:text-[#f0ebd8] transition-colors">Online Shops</Link></li>
+              <li><Link href="/software" className="hover:text-[#f0ebd8] transition-colors">Web Applications</Link></li>
+              <li><Link href="/software" className="hover:text-[#f0ebd8] transition-colors">Custom Software</Link></li>
+              <li><Link href="/software" className="hover:text-[#f0ebd8] transition-colors">Plugins</Link></li>
             </ul>
           </div>
 

@@ -88,11 +88,11 @@ const ServiceSection = () => {
       <div className="container px-4 mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row gap-6 justify-between mb-12">
           <div className="max-w-xl">
-            <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-widest">
+            <h1 className="font-bebas text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-widest">
               Unsere Leistungen
-            </h2>
+            </h1>
             <p className="text-lg text-[#748cab] font-light">
-              Wir bieten dir alles, was du für deinen digitalen Erfolg brauchst – individuell, kreativ und immer direkt am Code.
+              Webdesign, Webentwicklung und Online Marketing für Unternehmen in Magdeburg und Umgebung – individuell, kreativ und immer direkt am Code.
             </p>
           </div>
           <div className="flex items-center md:justify-end">

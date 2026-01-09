@@ -92,12 +92,13 @@ const SoftwareLeistung = () => {
                     </div>
                     <div className="flex items-center justify-center mb-12 sm:mb-16">
                         <div className="w-full max-w-4xl text-center">
-                            <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest drop-shadow-lg mb-6">
-                                Software Entwicklung
-                            </h2>
+                            <h1 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest drop-shadow-lg mb-6">
+                                Individuelle Softwareentwicklung
+                            </h1>
                             <p className="text-lg sm:text-xl text-[#748cab] font-light max-w-3xl mx-auto leading-relaxed">
-                                Maßgeschneiderte Software-Lösungen für komplexe Anforderungen. Von Webanwendungen bis hin zu 
-                                KI-Integration – wir entwickeln individuelle Tools, die dein Business voranbringen.
+                                Maßgeschneiderte Software-Lösungen für komplexe Anforderungen – von Webanwendungen bis zur
+                                KI-Integration. Wir entwickeln individuelle Tools für Unternehmen in Magdeburg und Umgebung,
+                                die dein Business voranbringen.
                             </p>
                         </div>
                     </div>

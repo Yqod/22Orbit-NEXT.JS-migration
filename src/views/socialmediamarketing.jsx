@@ -93,12 +93,13 @@ const SocialMediaMarketingLeistung = () => {
                     </div>
                     <div className="flex items-center justify-center mb-12 sm:mb-16">
                         <div className="w-full max-w-4xl text-center">
-                            <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest drop-shadow-lg mb-6">
+                            <h1 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest drop-shadow-lg mb-6">
                                 Social Media Marketing
-                            </h2>
+                            </h1>
                             <p className="text-lg sm:text-xl text-[#748cab] font-light max-w-3xl mx-auto leading-relaxed">
-                                Wir bringen deine Marke auf die relevanten Social Media Plattformen und sorgen für 
-                                authentische Reichweite, echte Interaktion und nachhaltiges Wachstum deiner Community.
+                                Wir bringen deine Marke auf die relevanten Social Media Plattformen und sorgen für
+                                authentische Reichweite, echte Interaktion und nachhaltiges Wachstum – für Unternehmen
+                                in Magdeburg und Umgebung.
                             </p>
                         </div>
                     </div>

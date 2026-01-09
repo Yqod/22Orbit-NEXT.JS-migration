@@ -166,9 +166,9 @@ const PricingComponent = () => {
       <section id ="price" className="min-h-[60vh] bg-gradient-to-b from-[#1d2d44] to-[#0d1321] flex flex-col items-center justify-center py-20 px-4">
         <div className="w-full max-w-7xl mx-auto mt-16">
           <div className="text-center mb-16">
-            <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#f0ebd8] font-bold tracking-widest drop-shadow-lg mb-6">
+              <h1 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#f0ebd8] font-bold tracking-widest drop-shadow-lg mb-6">
               Preise & Pakete
-            </h2>
+              </h1>
             <p className="text-[#748cab] text-lg sm:text-xl md:text-2xl font-light max-w-4xl mx-auto px-4">
               Transparente Preise für Landingpages, Online-Shops und individuelle Software-Lösungen.<br />
               Jedes Projekt ist einzigartig – hier findest du unsere Richtwerte.
