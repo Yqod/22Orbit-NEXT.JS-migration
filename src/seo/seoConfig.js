@@ -16,7 +16,7 @@ export const seoConfig = {
   },
 
   webentwicklung: {
-    title: "Webentwicklung | Innovativ und schnell |",
+    title: "Webentwicklung | Innovativ und schnell",
     description:
       "Professionelle Webentwicklung mit modernsten Technologien. Responsive, schnell und SEO-optimiert. Von der Konzeption bis zur Wartung.",
     keywords:
@@ -24,7 +24,7 @@ export const seoConfig = {
   },
 
   socialmedia: {
-    title: "Social Media Marketing | Reichweite & Wachstum |",
+    title: "Social Media Marketing | Reichweite & Wachstum",
     description:
       "Professionelles Social Media Marketing von 22Orbit. Strategie, Content Creation, Community Management und Paid Advertising für maximale Reichweite.",
     keywords:
@@ -32,7 +32,7 @@ export const seoConfig = {
   },
 
   software: {
-    title: "Softwareentwicklung | Individuelle Lösungen |",
+    title: "Softwareentwicklung | Individuelle Lösungen",
     description:
       "Maßgeschneiderte Softwareentwicklung von 22Orbit. Web Applications, APIs, Automatisierung und AI-Lösungen für Ihr Unternehmen.",
     keywords:

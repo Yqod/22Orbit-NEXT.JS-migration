@@ -27,6 +27,54 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const organizationLdJson = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "22Orbit",
+    alternateName: "22Orbit Webentwicklung",
+    url: "https://22orbit.de",
+    logo: "https://22orbit.de/22Orbit4X4Logo.jpg",
+    description:
+      "Premium Webentwicklung und digitale Lösungen. Spezialisiert auf moderne Webseiten, Online-Shops und maßgeschneiderte Software-Entwicklung.",
+    foundingDate: "2020",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+4917664637327",
+      contactType: "customer service",
+      email: "info@22orbit.de",
+      availableLanguage: "German",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Nicolaistraße 5",
+      addressLocality: "Magdeburg",
+      postalCode: "39124",
+      addressCountry: "DE",
+    },
+    sameAs: [
+      "https://github.com/22orbit",
+      "https://linkedin.com/company/22orbit",
+      "https://twitter.com/22orbit",
+    ],
+    service: [
+      {
+        "@type": "Service",
+        name: "Webentwicklung",
+        description: "Moderne Webseiten und Web-Anwendungen",
+      },
+      {
+        "@type": "Service",
+        name: "Online-Shop Entwicklung",
+        description: "E-Commerce Lösungen und Online-Shops",
+      },
+      {
+        "@type": "Service",
+        name: "Software-Entwicklung",
+        description: "Maßgeschneiderte Software-Lösungen",
+      },
+    ],
+  };
+
   return (
     <html lang="de">
       <head>
@@ -35,6 +83,12 @@ export default function RootLayout({ children }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationLdJson),
+          }}
         />
       </head>
       <body>{children}</body>
