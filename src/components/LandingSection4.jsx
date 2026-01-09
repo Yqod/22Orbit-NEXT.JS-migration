@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+"use client";
+
 import Koenigskristall from "./Koenigskristall";
 import HkiPortfolio from "./hki";
 import SperryPortfolio from "./sperry";
@@ -24,7 +25,7 @@ const LandingSection4 = () => {
       <RobertAndWoodman className="z-[10001]" />
       <HkiPortfolio className="z-[10001]" />
       <SperryPortfolio className="z-[10001]" />
-      </>
+    </>
   );
 };
 

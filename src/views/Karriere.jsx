@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import SEO, { seoConfig } from '../components/SEO';
 
 const Karriere = () => {
     useEffect(() => {
@@ -9,11 +10,6 @@ const Karriere = () => {
     }, []);
   return (
     <>
-    <SEO 
-      title={seoConfig.services.title}
-      description={seoConfig.services.description}
-      keywords={seoConfig.services.keywords}
-    />
     <Navbar />
     <section className="min-h-screen bg-gradient-to-b from-[#0d1321] to-[#1d2d44] flex flex-col items-center justify-center py-24 sm:py-24 px-4">
       <div className="w-full max-w-6xl mx-auto">

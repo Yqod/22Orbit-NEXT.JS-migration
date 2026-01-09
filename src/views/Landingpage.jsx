@@ -1,3 +1,5 @@
+"use client";
+
 import Particles from '../components/Galaxy.jsx';
 import Hero from '../components/Hero.jsx';
 import Navbar from '../components/Navbar.jsx';
@@ -12,7 +14,6 @@ import CTA from '../components/CTA.jsx';
 import { useEffect } from 'react';
 import About22Orbit from '../components/About22Orbit.jsx';
 import Bewertungen from '../components/bewertung.jsx';
-import SEO, { seoConfig } from '../components/SEO';
 
 function Landingpage() {
   useEffect(() => {
@@ -22,10 +23,7 @@ function Landingpage() {
   }, []);
 
   return (
-    <><SEO
-      title={seoConfig.home.title}
-      description={seoConfig.home.description}
-      keywords={seoConfig.home.keywords} /><div className="bg-[#0d1321] w-full relative scroll-smooth">
+    <div className="bg-[#0d1321] w-full relative scroll-smooth">
         
         {/* Particles als fixer Hintergrund */}
         <div className="fixed inset-0 w-full h-full z-0 pointer-events-none">
@@ -64,7 +62,7 @@ function Landingpage() {
         <Bewertungen />
         <CTA />
         <Footer />
-      </div></>
+      </div>
   );
 }
 

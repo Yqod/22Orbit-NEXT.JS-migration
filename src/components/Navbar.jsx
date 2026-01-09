@@ -1,10 +1,13 @@
+"use client";
+
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -47,8 +50,8 @@ const Navbar = () => {
       e.preventDefault();
       
       // Wenn wir nicht auf der Landingpage sind, erst dahin navigieren
-      if (location.pathname !== "/") {
-        window.location.href = "/#" + item.href;
+      if (pathname !== "/") {
+        router.push("/#" + item.href);
       } else {
         scrollToSection(item.href);
       }
@@ -56,11 +59,11 @@ const Navbar = () => {
       e.preventDefault();
       
       // Wenn wir bereits auf der Landingpage sind, nur nach oben scrollen
-      if (location.pathname === "/") {
+      if (pathname === "/") {
         scrollToTop();
       } else {
         // Sonst zur Landingpage navigieren und dann nach oben scrollen
-        navigate("/");
+        router.push("/");
         setTimeout(() => scrollToTop(), 100);
       }
     }
@@ -86,7 +89,7 @@ const Navbar = () => {
           <li key={idx}>
             {item.type === "route" ? (
               <Link
-                to={item.href}
+                href={item.href}
                 className="text-[#f0ebd8] font-bebas text-lg tracking-wide hover:text-[#748cab] transition-colors"
               >
                 {item.label}
@@ -152,7 +155,7 @@ const Navbar = () => {
             <li key={idx}>
               {item.type === "route" ? (
                 <Link
-                  to={item.href}
+                  href={item.href}
                   className="block px-8 py-3 text-[#f0ebd8] font-bebas text-lg tracking-wide hover:text-[#748cab] hover:bg-[#3e5c76]/20 transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >

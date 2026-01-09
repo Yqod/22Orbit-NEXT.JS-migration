@@ -1,51 +1,50 @@
+"use client";
+
 import React, { useEffect } from "react";
-import { useLottie } from "lottie-react";
 import Navbar from "../components/Navbar";
-import { Link } from "react-router-dom";
+import { useLottie } from "lottie-react";
+import lottiLeistungSoftware from "../assets/lotti/lottiLeistungSoftware.json";
+import Link from "next/link";
 import FooterLegal from "../components/FooterLegal";
-import SEO, { seoConfig } from "../components/SEO";
-import lottiLeistungWebsite4 from "../assets/lotti/lottiLeistungWebsite4.json";
 
 const serviceList = [
     {
-        title: "Webseiten & Landing Pages",
-        emoji: "🚀",
+        title: "Web Applications",
+        emoji: "🌐",
         description:
-            "Hochkonvertierende Webseiten, die deine Besucher zu Kunden machen. Optimiert für Performance und Conversion-Rate.",
+            "Komplexe Webanwendungen mit React, Node.js und modernen Frameworks. Skalierbar, performant und benutzerfreundlich.",
     },
     {
-        title: "Online Shops",
-        emoji: "🛒",
+        title: "API Development",
+        emoji: "🔗",
         description:
-            "Vollständige E-Commerce-Lösungen mit modernem Design, sicheren Zahlungsabwicklungen und intuitivem Produktmanagement.",
+            "RESTful APIs und GraphQL-Schnittstellen für nahtlose Datenintegration und systemübergreifende Kommunikation.",
     },
     {
-        title: "Webdesign",
-        emoji: "🎨",
+        title: "Database Solutions",
+        emoji: "🗄️",
         description:
-            "Kreatives und benutzerfreundliches Design, das deine Marke perfekt repräsentiert und deine Zielgruppe anspricht.",
+            "Maßgeschneiderte Datenbankarchitekturen mit MySQL, PostgreSQL oder MongoDB für optimale Performance.",
     },
     {
-        title: "Responsive Design",
-        emoji: "📱",
+        title: "Automatisierung",
+        emoji: "🤖",
         description:
-            "Perfekte Darstellung auf allen Geräten - Desktop, Tablet und Smartphone. Optimiert für beste Nutzererfahrung.",
+            "Workflow-Automatisierung und Custom Tools zur Optimierung deiner Geschäftsprozesse und Effizienzsteigerung.",
     },
     {
-        title: "Performance",
-        emoji: "⚡",
+        title: "Cloud Integration",
+        emoji: "☁️",
         description:
-            "Blitzschnelle Ladezeiten und optimierte Performance für bessere Rankings und zufriedene Nutzer.",
+            "Migration und Integration in Cloud-Umgebungen wie AWS, Azure oder Google Cloud für maximale Skalierbarkeit.",
     },
     {
-        title: "SEO-Optimiert",
-        emoji: "🔍",
+        title: "AI-Lösungen",
+        emoji: "🧠",
         description:
-            "Suchmaschinenoptimiert von Anfang an. Structured Data, Meta-Tags und technische SEO-Optimierung inklusive.",
+            "Künstliche Intelligenz und Machine Learning Integration für intelligente Datenanalyse und Prozessoptimierung.",
     },
 ];
-
-
 
 const ServiceItem = ({ service, isRightAlign }) => (
     <div className={`flex items-start mt-12 ${isRightAlign ? "lg:flex-row-reverse lg:text-right" : ""}`}>
@@ -57,40 +56,32 @@ const ServiceItem = ({ service, isRightAlign }) => (
             </span>
         </div>
         <div className="flex-1">
-            <h4 className="text-2xl font-bebas tracking-wide text-[#f0ebd8] ml-4 mb-4">{service.title}</h4>
+            <h4 className="text-2xl font-bebas tracking-wide text-[#f0ebd8] ml-4  mb-4">{service.title}</h4>
             <p className="text-[#748cab] font-light leading-relaxed">{service.description}</p>
         </div>
     </div>
 );
 
-
-const WebseitenLeistung = () => {
+const SoftwareLeistung = () => {
     useEffect(() => {
         setTimeout(() => window.scrollTo(0, 0), 0);
     }, []);
-
-    const { View } = useLottie({
-    animationData: lottiLeistungWebsite4,
-    loop: true,
-    autoplay: true,
-    style: { width: 350, height: 400 }
-});
-
+     const { View } = useLottie({
+        animationData: lottiLeistungSoftware,
+        loop: true,
+        autoplay: true,
+        style: { width: 350, height: 400 }
+    });
 
     return (
         <>
-            <SEO 
-                title={seoConfig.webentwicklung.title}
-                description={seoConfig.webentwicklung.description}
-                keywords={seoConfig.webentwicklung.keywords}
-            />
             <Navbar />
             <section className="py-28 md:py-28 bg-gradient-to-b from-[#1d2d44] to-[#0d1321] text-[#f0ebd8] min-h-screen">
                 <div className="container px-4 mx-auto max-w-7xl">
                     {/* Zurück Button */}
                     <div className="mb-8">
                         <Link
-                            to="/services"
+                            href="/services"
                             className="inline-flex items-center text-[#748cab] hover:text-[#f0ebd8] transition-colors duration-300 font-light"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,12 +93,11 @@ const WebseitenLeistung = () => {
                     <div className="flex items-center justify-center mb-12 sm:mb-16">
                         <div className="w-full max-w-4xl text-center">
                             <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest drop-shadow-lg mb-6">
-                                Webseiten Entwicklung
+                                Software Entwicklung
                             </h2>
                             <p className="text-lg sm:text-xl text-[#748cab] font-light max-w-3xl mx-auto leading-relaxed">
-                                Von der ersten Idee bis zur fertigen Website – wir entwickeln moderne, 
-                                responsive und SEO-optimierte Webseiten, die dein Unternehmen perfekt repräsentieren 
-                                und deine Ziele erreichen.
+                                Maßgeschneiderte Software-Lösungen für komplexe Anforderungen. Von Webanwendungen bis hin zu 
+                                KI-Integration – wir entwickeln individuelle Tools, die dein Business voranbringen.
                             </p>
                         </div>
                     </div>
@@ -124,18 +114,18 @@ const WebseitenLeistung = () => {
                         {/* Mittleres Bild */}
                         <div className="col-span-3 lg:col-span-1">
                             <div
-                                className="bg-gradient-to-br from-[#3e5c76]/30 to-[#748cab]/20 backdrop-blur-sm rounded-2xl h-full min-h-[400px] border border-[#748cab]/30 flex items-center justify-center"
+                                className="bg-gradient-to-br from-[#3e5c76]/30 to-[#748cab]/20 backdrop-blur-sm rounded-2xl h-full min-h-[620px] border border-[#748cab]/30 flex items-center justify-center"
                             >
                                 <div className="text-center p-8">
-                                    <div className="w-60 h-60   flex items-center justify-center mb-6 mx-auto ">
+                                    <div className="w-24 h-24 bg-gradient-to-r from-[#748cab] to-[#3e5c76] rounded-full flex items-center justify-center mt-12 mb-2 mx-auto shadow-xl">
                                         <span className="text-3xl">{View}</span>
                                     </div>
-                                    <h3 className="font-bebas text-2xl text-[#f0ebd8] tracking-wide mb-4">
-                                        Individuelle Entwicklung
+                                    <h3 className="font-bebas text-2xl text-[#f0ebd8] tracking-wide  mt-48">
+                                        Individuelle Software
                                     </h3>
                                     <p className="text-[#748cab] font-light">
-                                        Jede Website wird individuell programmiert – 
-                                        kein Baukasten, sondern maßgeschneiderte Lösungen.
+                                        Jede Software wird speziell für deine Anforderungen entwickelt – 
+                                        keine Standard-Lösungen, sondern perfekt angepasste Tools.
                                     </p>
                                 </div>
                             </div>
@@ -154,17 +144,17 @@ const WebseitenLeistung = () => {
                     {/* CTA Section */}
                     <div className="text-center mt-16 pt-12 border-t border-[#748cab]/20">
                         <h3 className="font-bebas text-3xl text-[#f0ebd8] tracking-wide mb-6">
-                            Bereit für deine neue Website?
+                            Bereit für deine individuelle Software?
                         </h3>
                         <p className="text-[#748cab] mb-8 max-w-2xl mx-auto">
-                            Lass uns gemeinsam deine Vision umsetzen. Kontaktiere uns für ein 
-                            unverbindliches Beratungsgespräch und erfahre, wie wir dein Projekt realisieren können.
+                            Lass uns deine Herausforderungen besprechen und gemeinsam die perfekte 
+                            Software-Lösung für dein Unternehmen entwickeln.
                         </p>
                         <a
                             href="/kontakt"
                             className="inline-block py-4 px-8 rounded-full bg-gradient-to-r from-[#748cab] to-[#3e5c76] hover:scale-105 text-[#f0ebd8] duration-300 font-bebas tracking-wide shadow-xl text-lg"
                         >
-                            Jetzt Projekt starten
+                            Projekt besprechen
                         </a>
                     </div>
                 </div>
@@ -174,4 +164,4 @@ const WebseitenLeistung = () => {
     );
 };
 
-export default WebseitenLeistung;
+export default SoftwareLeistung;

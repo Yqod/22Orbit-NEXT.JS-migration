@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
-import heart from "../assets/heart.svg";
-import rocket from "../assets/rocket.svg";
-import united from "../assets/united.svg";
+
+const heart = "/assets/heart.svg";
+const rocket = "/assets/rocket.svg";
+const united = "/assets/united.svg";
 
 
 const teamMembers = [

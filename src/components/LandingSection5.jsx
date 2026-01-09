@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";  
+import Link from "next/link";
 
 
 const LandingSection5 = () => (
@@ -20,7 +22,7 @@ const LandingSection5 = () => (
          {/* CTA */}
         <div className="text-center">
          <Link
-          to="/preisliste"
+          href="/preisliste"
           className="inline-block bg-gradient-to-r from-[#748cab] to-[#3e5c76] text-[#f0ebd8] font-bebas text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl tracking-widest hover:scale-105 transition-all duration-300 hover:shadow-2xl"
         >
           Preisliste

@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
-import meeting from "../assets/meeting.svg";
-import task from "../assets/task.svg";
-import develope from "../assets/develope.svg";
-import consulting from "../assets/consulting.svg";
+import Link from "next/link";
+
+const meeting = "/assets/meeting.svg";
+const task = "/assets/task.svg";
+const develope = "/assets/develope.svg";
+const consulting = "/assets/consulting.svg";
 
 const partnershipSteps = [
   {
@@ -82,7 +85,7 @@ const LandingSection3 = () => {
         {/* CTA */}
         <div className="text-center">
           <Link
-          to="/kontakt"
+          href="/kontakt"
           className="inline-block bg-gradient-to-r from-[#748cab] to-[#3e5c76] text-[#f0ebd8] font-bebas text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl tracking-widest hover:scale-105 transition-all duration-300 hover:shadow-2xl"
         >
           Werde unser Partner

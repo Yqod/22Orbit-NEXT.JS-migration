@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { useLottie } from "lottie-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import lottiRocketDisplay22Orbit from "../assets/lotti/lottiRocketDisplay22Orbit.json";
 import lottiSoftware from "../assets/lotti/lottiSoftware.json";
 import lottiSocialMedia from "../assets/lotti/lottiSocialMedia.json";
@@ -55,7 +57,7 @@ const ServiceItem = ({ service }) => {
         
         {/* Angebote Liste */}
         <div className="mb-4">
-          {service.angebote.map((angebot, i) => (
+          {service.angebote.map((angebot) => (
             <span key={angebot} className="flex items-center mb-2">
               <span className="text-[#748cab]  font-bold mr-2">•</span>
               <span className="text-[#f0ebd8] text-sm font-light">{angebot}</span>
@@ -68,7 +70,7 @@ const ServiceItem = ({ service }) => {
         {/* Button */}
         <div className="mt-6">
           <Link
-            to={service.link}
+            href={service.link}
             className="inline-block py-2 px-4 rounded-full bg-gradient-to-r from-[#748cab] to-[#3e5c76] hover:scale-105 text-[#f0ebd8] duration-300 font-bebas tracking-wide shadow-lg text-lg"
           >
             Mehr erfahren
@@ -95,7 +97,7 @@ const ServiceSection = () => {
           </div>
           <div className="flex items-center md:justify-end">
             <Link
-              to="/kontakt"
+              href="/kontakt"
               className="py-3 px-7 rounded-full bg-gradient-to-r from-[#748cab] to-[#3e5c76] hover:scale-105 text-[#f0ebd8] duration-300 font-bebas tracking-wide shadow-xl"
             >
               Projekt starten

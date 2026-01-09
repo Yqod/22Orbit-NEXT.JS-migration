@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const CTA = () => (
   <section className="min-h-[70vh] bg-gradient-to-b from-[#0d1321] via-[#1d2d44]  flex flex-col items-center justify-center py-34 sm:py-30 px-4">
@@ -24,7 +26,7 @@ const CTA = () => (
           <span className="inline-block animate-bounce">📞</span> Kostenlos anrufen
         </a>
        <Link
-          to="/kontakt"
+          href="/kontakt"
           className="inline-block bg-transparent border-2 border-[#748cab] text-[#748cab] hover:bg-[#748cab] hover:text-[#f0ebd8] font-bebas text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl tracking-widest hover:scale-105 transition-all duration-300"
         >
           ✉️ Kontaktformular

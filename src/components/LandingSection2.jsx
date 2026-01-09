@@ -1,11 +1,14 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
-import heart from "../assets/heart.svg";
-import rocket from "../assets/rocket.svg";
-import individuell from "../assets/individuell.svg";
-import fastdeliver from "../assets/fastdeliver.svg"; 
-import handshake from "../assets/handshake.svg";
-import wrench from "../assets/wrench.svg";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
+const heart = "/assets/heart.svg";
+const rocket = "/assets/rocket.svg";
+const individuell = "/assets/individuell.svg";
+const fastdeliver = "/assets/fastdeliver.svg";
+const handshake = "/assets/handshake.svg";
+const wrench = "/assets/wrench.svg";
 
 
 const reasons = [
@@ -54,7 +57,7 @@ const LandingSection2 = () => {
     const scrollSpeed = 0.8;
     let isAnimating = true;
     let isInteracting = false; 
-    let isDragging = false;
+    // dragging state is handled via scrollContainer events
 
     const animate = () => {
       if (!isAnimating || !scrollContainer || isInteracting) return;
@@ -83,7 +86,6 @@ const LandingSection2 = () => {
 
     const handleMouseLeave = () => {
       isInteracting = false;
-      isDragging = false;
       scrollContainer.style.overflowX = 'auto'; 
       scrollContainer.style.cursor = 'pointer';
       
@@ -93,28 +95,24 @@ const LandingSection2 = () => {
 
     const handleMouseDown = () => {
       if (isInteracting) {
-        isDragging = true;
         scrollContainer.style.cursor = 'grabbing';
       }
     };
 
     const handleMouseUp = () => {
-      isDragging = false;
       if (isInteracting) {
         scrollContainer.style.cursor = 'grab';
       }
     };
 
     // Touch Events für Mobile
-    const handleTouchStart = (e) => {
+    const handleTouchStart = () => {
       isInteracting = true;
-      isDragging = true;
       scrollContainer.style.overflowX = 'auto';
       cancelAnimationFrame(animationId);
     };
 
     const handleTouchEnd = () => {
-      isDragging = false;
       isInteracting = false;
       scrollContainer.style.overflowX = 'auto'; 
       
@@ -194,7 +192,7 @@ const LandingSection2 = () => {
             {/* CTA */}
       <div className="text-center">
         <Link
-          to="/services"
+          href="/services"
           className="inline-block bg-gradient-to-r from-[#748cab] to-[#3e5c76] text-[#f0ebd8] font-bebas text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-xl tracking-widest hover:scale-105 transition-all duration-300 hover:shadow-2xl"
         >
           entdecke unser Angebot

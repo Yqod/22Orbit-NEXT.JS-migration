@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const FooterLegal = () => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   // Smooth Scroll Funktion (gleiche wie in Navbar)
   const scrollToSection = (sectionId) => {
@@ -22,7 +25,7 @@ const FooterLegal = () => {
     e.preventDefault();
     
     // Wenn wir nicht auf der Landingpage sind, erst dahin navigieren
-    if (location.pathname !== "/") {
+    if (pathname !== "/") {
       window.location.href = "/#" + sectionId;
     } else {
       scrollToSection(sectionId);
@@ -90,8 +93,8 @@ const FooterLegal = () => {
                   Portfolio
                 </button>
               </li>
-              <li><Link to="/karriere" className="hover:text-[#f0ebd8] transition-colors">Karriere</Link></li>
-              <li><Link to="/kontakt" className="hover:text-[#f0ebd8] transition-colors">Kontakt</Link></li>
+              <li><Link href="/karriere" className="hover:text-[#f0ebd8] transition-colors">Karriere</Link></li>
+              <li><Link href="/kontakt" className="hover:text-[#f0ebd8] transition-colors">Kontakt</Link></li>
             </ul>
           </div>
 
@@ -101,7 +104,7 @@ const FooterLegal = () => {
               Support
             </h4>
             <ul className="space-y-2 text-[#748cab] text-sm">
-              <li><Link to="/faq" className="hover:text-[#f0ebd8] transition-colors">FAQ</Link></li>
+              <li><Link href="/faq" className="hover:text-[#f0ebd8] transition-colors">FAQ</Link></li>
               <li><a href="mailto:info@22orbit.de" className="hover:text-[#f0ebd8] transition-colors">E-Mail Support</a></li>
             </ul>
           </div>
@@ -149,13 +152,13 @@ const FooterLegal = () => {
 
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-[#748cab] text-sm">
-              <Link to="/impressum" className="hover:text-[#f0ebd8] transition-colors">
+              <Link href="/impressum" className="hover:text-[#f0ebd8] transition-colors">
                 Impressum
               </Link>
-              <Link to="/datenschutz" className="hover:text-[#f0ebd8] transition-colors">
+              <Link href="/datenschutz" className="hover:text-[#f0ebd8] transition-colors">
                 Datenschutz
               </Link>
-              <Link to="/agb" className="hover:text-[#f0ebd8] transition-colors">
+              <Link href="/agb" className="hover:text-[#f0ebd8] transition-colors">
                 AGB
               </Link>
             </div>

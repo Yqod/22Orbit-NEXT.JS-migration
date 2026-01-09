@@ -1,10 +1,11 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { useLottie } from "lottie-react";
 import lottiLeistungSocialMedia from "../assets/lotti/lottiLeistungSocialMedia.json";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import FooterLegal from "../components/FooterLegal";
-import SEO, { seoConfig } from "../components/SEO";
 
 const serviceList = [
     {
@@ -75,18 +76,13 @@ const SocialMediaMarketingLeistung = () => {
 
     return (
         <>
-            <SEO 
-                title={seoConfig.socialmedia.title}
-                description={seoConfig.socialmedia.description}
-                keywords={seoConfig.socialmedia.keywords}
-            />
             <Navbar />
             <section className="py-28 md:py-28 bg-gradient-to-b from-[#1d2d44] to-[#0d1321] text-[#f0ebd8] min-h-screen">
                 <div className="container px-4 mx-auto max-w-7xl">
                     {/* Zurück Button */}
                     <div className="mb-8">
                         <Link
-                            to="/services"
+                            href="/services"
                             className="inline-flex items-center text-[#748cab] hover:text-[#f0ebd8] transition-colors duration-300 font-light"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
