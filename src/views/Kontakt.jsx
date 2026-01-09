@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import DOMPurify from 'dompurify';
 import FooterLegal from "../components/FooterLegal";
+import Link from "next/link";
 
 const Kontakt = () => {
     useEffect(() => {
@@ -267,7 +268,7 @@ const Kontakt = () => {
                             Kontakt
                         </h1>
                         <p className="text-[#748cab] text-lg sm:text-xl md:text-2xl font-light max-w-4xl mx-auto">
-                            Bereit für dein nächstes digitales Projekt? Ob Webdesign, Webentwicklung, Online-Shop oder individuelle Software in Magdeburg – lass uns darüber sprechen!
+                            Bereit für dein nächstes digitales Projekt? Ob Webdesign, Webentwicklung, Online-Shop oder individuelle Software in Magdeburg – lass uns darüber sprechen! Wenn du vorher kurz stöbern willst: <Link href="/services" className="text-[#f0ebd8] underline underline-offset-4 hover:text-[#748cab] transition-colors">unsere Leistungen</Link>.
                         </p>
                     </div>
 

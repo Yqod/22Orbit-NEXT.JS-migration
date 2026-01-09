@@ -92,7 +92,7 @@ const ServiceSection = () => {
               Unsere Leistungen
             </h1>
             <p className="text-lg text-[#748cab] font-light">
-              Webdesign, Webentwicklung und Online Marketing für Unternehmen in Magdeburg und Umgebung – individuell, kreativ und immer direkt am Code.
+              Webdesign, Webentwicklung und Online Marketing für Unternehmen in Magdeburg und Umgebung – von <Link href="/webseiten" className="text-[#f0ebd8] underline underline-offset-4 hover:text-[#748cab] transition-colors">Webseiten</Link> über <Link href="/software" className="text-[#f0ebd8] underline underline-offset-4 hover:text-[#748cab] transition-colors">Software</Link> bis zu <Link href="/socialmediamarketing" className="text-[#f0ebd8] underline underline-offset-4 hover:text-[#748cab] transition-colors">Social Media</Link>.
             </p>
           </div>
           <div className="flex items-center md:justify-end">
