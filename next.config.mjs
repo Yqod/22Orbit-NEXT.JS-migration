@@ -8,16 +8,6 @@ const nextConfig = {
       { protocol: "https", hostname: "cdn.pixabay.com" },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.22orbit.de" }],
-        destination: "https://22orbit.de/:path*",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;

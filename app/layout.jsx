@@ -16,9 +16,6 @@ export const metadata = {
   icons: {
     icon: "/22Orbit4X4Logo.jpg",
   },
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     siteName: "22Orbit",
