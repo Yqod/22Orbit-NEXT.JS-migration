@@ -100,6 +100,9 @@ const SocialMediaMarketingLeistung = () => {
                                 Wir bringen deine Marke auf die relevanten Social Media Plattformen und sorgen für
                                 authentische Reichweite, echte Interaktion und nachhaltiges Wachstum – für Unternehmen
                                 in Magdeburg und Umgebung.
+                                <span className="block mt-3">
+                                    Damit aus Reichweite Anfragen werden, optimieren wir auch deine Landing Pages: <Link href="/webseiten" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">Webseiten & Landing Pages</Link>.
+                                </span>
                             </p>
                         </div>
                     </div>

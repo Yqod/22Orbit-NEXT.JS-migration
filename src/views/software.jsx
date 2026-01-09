@@ -99,6 +99,9 @@ const SoftwareLeistung = () => {
                                 Maßgeschneiderte Software-Lösungen für komplexe Anforderungen – von Webanwendungen bis zur
                                 KI-Integration. Wir entwickeln individuelle Tools für Unternehmen in Magdeburg und Umgebung,
                                 die dein Business voranbringen.
+                                <span className="block mt-3">
+                                    Für mehr Anfragen und Conversion brauchst du oft auch eine starke Website: <Link href="/webseiten" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">Webdesign & Webseiten</Link>.
+                                </span>
                             </p>
                         </div>
                     </div>

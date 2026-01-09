@@ -104,6 +104,9 @@ const WebseitenLeistung = () => {
                                 Von der ersten Idee bis zur fertigen Website – wir entwickeln moderne,
                                 responsive und SEO-optimierte Webseiten für Unternehmen in Magdeburg und Umgebung,
                                 die deine Marke stärken und deine Ziele erreichen.
+                                <span className="block mt-3">
+                                    Wenn du zusätzlich ein Kundenportal, Tool oder eine Web-App brauchst: <Link href="/software" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">individuelle Softwareentwicklung</Link>.
+                                </span>
                             </p>
                         </div>
                     </div>

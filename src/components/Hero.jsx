@@ -36,7 +36,7 @@ const Hero = () => {
                             </span>
                             </h1>
                             <p className="text-[#748cab] text-lg font-light mb-2 leading-relaxed">
-                             <span className="font-bebas text-xl text-[#f0ebd8]">Webentwicklung</span> im Herzen <span className="font-bebas text-xl text-[#f0ebd8]">Magdeburgs</span> – von der <Link href="/webseiten" >Landing Page</Link> bis zur <Link href="/software">individuellen Software</Link>: Webdesign, Entwicklung und <Link href="/services" className="text-[#f0ebd8]  hover:text-[#748cab] transition-colors">SEO</Link> aus einer Hand.
+                             <span className="font-bebas text-xl text-[#f0ebd8]">Webentwicklung</span> im Herzen <span className="font-bebas text-xl text-[#f0ebd8]">Magdeburgs</span> – von der <Link href="/webseiten" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">Homepage</Link> bis zur <Link href="/software" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">individuellen Software</Link>: Webdesign, Entwicklung und <Link href="/services" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">SEO</Link> aus einer Hand.
                                  </p>
 
                         </div>
