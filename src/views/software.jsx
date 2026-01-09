@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import { useLottie } from "lottie-react";
-import lottiLeistungSoftware from "../assets/lotti/lottiLeistungSoftware.json";
+import Lottie from "lottie-react";
 import Link from "next/link";
 import FooterLegal from "../components/FooterLegal";
 
@@ -63,15 +62,22 @@ const ServiceItem = ({ service, isRightAlign }) => (
 );
 
 const SoftwareLeistung = () => {
+    const [animationData, setAnimationData] = useState(null);
+
     useEffect(() => {
         setTimeout(() => window.scrollTo(0, 0), 0);
     }, []);
-     const { View } = useLottie({
-        animationData: lottiLeistungSoftware,
-        loop: true,
-        autoplay: true,
-        style: { width: 350, height: 400 }
-    });
+
+    useEffect(() => {
+        let cancelled = false;
+        (async () => {
+            const mod = await import("../assets/lotti/lottiLeistungSoftware.json");
+            if (!cancelled) setAnimationData(mod.default);
+        })();
+        return () => {
+            cancelled = true;
+        };
+    }, []);
 
     return (
         <>
@@ -122,7 +128,14 @@ const SoftwareLeistung = () => {
                             >
                                 <div className="text-center p-8">
                                     <div className="w-24 h-24 bg-gradient-to-r from-[#748cab] to-[#3e5c76] rounded-full flex items-center justify-center mt-12 mb-2 mx-auto shadow-xl">
-                                        <span className="text-3xl">{View}</span>
+                                        {animationData ? (
+                                            <Lottie
+                                                animationData={animationData}
+                                                loop
+                                                autoplay
+                                                style={{ width: 72, height: 72 }}
+                                            />
+                                        ) : null}
                                     </div>
                                     <h3 className="font-bebas text-2xl text-[#f0ebd8] tracking-wide  mt-48">
                                         Individuelle Software

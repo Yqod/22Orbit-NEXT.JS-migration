@@ -1,11 +1,8 @@
 "use client";
 
-import React from "react";
-import { useLottie } from "lottie-react";
+import React, { useEffect, useState } from "react";
+import Lottie from "lottie-react";
 import Link from "next/link";
-import lottiRocketDisplay22Orbit from "../assets/lotti/lottiRocketDisplay22Orbit.json";
-import lottiSoftware from "../assets/lotti/lottiSoftware.json";
-import lottiSocialMedia from "../assets/lotti/lottiSocialMedia.json";
 
 const services = [
   {
@@ -31,27 +28,37 @@ const services = [
   },
 ];
 
-const lottieMap = {
-  rocket: lottiRocketDisplay22Orbit,
-  software: lottiSoftware,
-  socialMedia: lottiSocialMedia,
+const lottieImporters = {
+  rocket: () => import("../assets/lotti/lottiRocketDisplay22Orbit.json"),
+  software: () => import("../assets/lotti/lottiSoftware.json"),
+  socialMedia: () => import("../assets/lotti/lottiSocialMedia.json"),
 };
 
 const lottieStyle = { width: 150, height: 150 };
 
 const ServiceItem = ({ service }) => {
-  const { View } = useLottie({
-    animationData: lottieMap[service.lottie],
-    loop: true,
-    autoplay: true,
-    style: lottieStyle,
-  });
+  const [animationData, setAnimationData] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const importer = lottieImporters[service.lottie];
+      if (!importer) return;
+      const mod = await importer();
+      if (!cancelled) setAnimationData(mod.default);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [service.lottie]);
 
   return (
     <div className="bg-[#3e5c76]/20 backdrop-blur-sm shadow-xl rounded-xl h-full border border-[#748cab]/30 hover:border-[#748cab]/60 transition-all duration-300 flex flex-col">
       <div className="p-6 md:p-12 flex-1 flex flex-col">
         <div className="w-[150px] h-[150px]  flex justify-center items-center mb-6 ">
-          {View}
+          {animationData ? (
+            <Lottie animationData={animationData} loop autoplay style={lottieStyle} />
+          ) : null}
         </div>
         <h4 className="text-2xl mb-6 font-bold font-bebas text-[#f0ebd8] tracking-wider">{service.title}</h4>
         

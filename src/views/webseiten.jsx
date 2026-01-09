@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useLottie } from "lottie-react";
+import React, { useEffect, useState } from "react";
+import Lottie from "lottie-react";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 import FooterLegal from "../components/FooterLegal";
-import lottiLeistungWebsite4 from "../assets/lotti/lottiLeistungWebsite4.json";
 
 const serviceList = [
     {
@@ -66,16 +65,22 @@ const ServiceItem = ({ service, isRightAlign }) => (
 
 
 const WebseitenLeistung = () => {
+    const [animationData, setAnimationData] = useState(null);
+
     useEffect(() => {
         setTimeout(() => window.scrollTo(0, 0), 0);
     }, []);
 
-    const { View } = useLottie({
-    animationData: lottiLeistungWebsite4,
-    loop: true,
-    autoplay: true,
-    style: { width: 350, height: 400 }
-});
+    useEffect(() => {
+        let cancelled = false;
+        (async () => {
+            const mod = await import("../assets/lotti/lottiLeistungWebsite4.json");
+            if (!cancelled) setAnimationData(mod.default);
+        })();
+        return () => {
+            cancelled = true;
+        };
+    }, []);
 
 
     return (
@@ -127,7 +132,14 @@ const WebseitenLeistung = () => {
                             >
                                 <div className="text-center p-8">
                                     <div className="w-60 h-60   flex items-center justify-center mb-6 mx-auto ">
-                                        <span className="text-3xl">{View}</span>
+                                        {animationData ? (
+                                            <Lottie
+                                                animationData={animationData}
+                                                loop
+                                                autoplay
+                                                style={{ width: 240, height: 240 }}
+                                            />
+                                        ) : null}
                                     </div>
                                     <h3 className="font-bebas text-2xl text-[#f0ebd8] tracking-wide mb-4">
                                         Individuelle Entwicklung

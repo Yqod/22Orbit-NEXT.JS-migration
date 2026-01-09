@@ -1,6 +1,39 @@
 {
   "redirects": [
     {
+      "source": "/index.html",
+      "has": [{ "type": "host", "value": "www.22orbit.de" }],
+      "destination": "https://22orbit.de/",
+      "permanent": true
+    },
+    {
+      "source": "/index.htm",
+      "has": [{ "type": "host", "value": "www.22orbit.de" }],
+      "destination": "https://22orbit.de/",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "has": [{ "type": "host", "value": "www.22orbit.de" }],
+      "destination": "https://22orbit.de/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.htm",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.22orbit.de" }],
       "destination": "https://22orbit.de/:path*",
