@@ -47,7 +47,7 @@ function Landingpage({ latestPosts = [] }) {
             speed={0.1}
             particleBaseSize={130}
             moveParticlesOnHover={true}
-            alphaParticles={false}
+            alphaParticles={true}
             disableRotation={false} />
         </div>
         {/* Navbar mit extra hohem z-index */}
