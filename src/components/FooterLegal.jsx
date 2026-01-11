@@ -21,17 +21,6 @@ const FooterLegal = () => {
     }
   };
 
-  const handleScrollClick = (sectionId, e) => {
-    e.preventDefault();
-    
-    // Wenn wir nicht auf der Landingpage sind, erst dahin navigieren
-    if (pathname !== "/") {
-      window.location.href = "/#" + sectionId;
-    } else {
-      scrollToSection(sectionId);
-    }
-  };
-
   return (
     <footer className="bg-[#0d1321] border-t border-[#748cab]/20 py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -78,20 +67,32 @@ const FooterLegal = () => {
             </h4>
             <ul className="space-y-2 text-[#748cab] text-sm">
               <li>
-                <button 
-                  onClick={(e) => handleScrollClick("team-section", e)}
+                <Link
+                  href="/#team-section"
+                  onClick={(e) => {
+                    if (pathname === "/") {
+                      e.preventDefault();
+                      scrollToSection("team-section");
+                    }
+                  }}
                   className="hover:text-[#f0ebd8] transition-colors cursor-pointer text-left"
                 >
                   Unser Team
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={(e) => handleScrollClick("portfolio-section", e)}
+                <Link
+                  href="/#portfolio-section"
+                  onClick={(e) => {
+                    if (pathname === "/") {
+                      e.preventDefault();
+                      scrollToSection("portfolio-section");
+                    }
+                  }}
                   className="hover:text-[#f0ebd8] transition-colors cursor-pointer text-left"
                 >
                   Portfolio
-                </button>
+                </Link>
               </li>
               <li><Link href="/karriere" className="hover:text-[#f0ebd8] transition-colors">Karriere</Link></li>
               <li><Link href="/kontakt" className="hover:text-[#f0ebd8] transition-colors">Kontakt</Link></li>

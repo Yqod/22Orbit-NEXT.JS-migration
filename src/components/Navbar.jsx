@@ -2,12 +2,11 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,37 +42,21 @@ const Navbar = () => {
     { label: "Leistungen", href: "/services", type: "route" },
     { label: "Blog", href: "/blog", type: "route" },
     { label: "Kontakt", href: "/kontakt", type: "route" },
-    ];
-
-  const handleClick = (item, e) => {
-    if (item.type === "scroll") {
-      e.preventDefault();
-      
-      // Wenn wir nicht auf der Landingpage sind, erst dahin navigieren
-      if (pathname !== "/") {
-        router.push("/#" + item.href);
-      } else {
-        scrollToSection(item.href);
-      }
-    } else if (item.type === "home") {
-      e.preventDefault();
-      
-      // Wenn wir bereits auf der Landingpage sind, nur nach oben scrollen
-      if (pathname === "/") {
-        scrollToTop();
-      } else {
-        // Sonst zur Landingpage navigieren und dann nach oben scrollen
-        router.push("/");
-        setTimeout(() => scrollToTop(), 100);
-      }
-    }
-  };
+  ];
 
   return (
     <nav className="w-full flex items-center justify-between px-8 py-6 fixed top-0 left-0 z-20 bg-[#1d2d44]/80 backdrop-blur-md shadow-lg">
       {/* Branding */}
-      <button
-        onClick={(e) => handleClick({ type: "home" }, e)}
+      <Link
+        href="/"
+        onClick={(e) => {
+          if (pathname === "/") {
+            e.preventDefault();
+            scrollToTop();
+          }
+          setIsMenuOpen(false);
+        }}
+        aria-label="22Orbit Startseite"
         className="font-bebas text-2xl sm:text-3xl text-[#f0ebd8] tracking-widest hover:text-[#748cab] transition-colors cursor-pointer"
       >
         <img
@@ -81,7 +64,7 @@ const Navbar = () => {
           alt="22Orbit Logo"
           className="h-10 w-auto mr-2"
         />
-      </button>
+      </Link>
 
       {/* Desktop Navigation */}
       <ul className="hidden md:flex gap-8">
@@ -95,12 +78,19 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ) : (
-              <button
-                onClick={(e) => handleClick(item, e)}
-                className="text-[#f0ebd8] font-bebas text-lg tracking-wide hover:text-[#748cab] transition-colors cursor-pointer"
+              <Link
+                href={`/#${item.href}`}
+                onClick={(e) => {
+                  if (pathname === "/") {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }
+                  setIsMenuOpen(false);
+                }}
+                className="text-[#f0ebd8] font-bebas text-lg tracking-wide hover:text-[#748cab] transition-colors"
               >
                 {item.label}
-              </button>
+              </Link>
             )}
           </li>
         ))}
@@ -162,12 +152,19 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ) : (
-                <button
-                  onClick={(e) => handleClick(item, e)}
+                <Link
+                  href={`/#${item.href}`}
+                  onClick={(e) => {
+                    if (pathname === "/") {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }
+                    setIsMenuOpen(false);
+                  }}
                   className="block w-full text-left px-8 py-3 text-[#f0ebd8] font-bebas text-lg tracking-wide hover:text-[#748cab] hover:bg-[#3e5c76]/20 transition-all duration-200"
                 >
                   {item.label}
-                </button>
+                </Link>
               )}
             </li>
           ))}
