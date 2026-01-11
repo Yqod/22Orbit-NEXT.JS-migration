@@ -97,17 +97,30 @@ const Particles = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({ depth: false, alpha: true });
-    const gl = renderer.gl;
-    
+    let renderer;
+    let gl;
+    let camera;
+    let particles;
+    let animationFrameId;
 
-    
-// filepath: c:\Users\gee0r\Desktop\React\GALAXYWEBSITE\galaxywebsite\src\components\Galaxy.jsx
-    container.appendChild(gl.canvas);
-    gl.clearColor(0, 0, 0, 0);
+    try {
+      renderer = new Renderer({ depth: false, alpha: true });
+      gl = renderer?.gl;
 
-    const camera = new Camera(gl, { fov: 15 });
-    camera.position.set(0, 0, cameraDistance);
+      // Some crawlers / headless environments have WebGL disabled.
+      // If WebGL can't be created, bail out quietly to avoid crashing the app.
+      if (!gl || !gl.canvas || typeof gl.clearColor !== "function") {
+        return;
+      }
+
+      container.appendChild(gl.canvas);
+      gl.clearColor(0, 0, 0, 0);
+
+      camera = new Camera(gl, { fov: 15 });
+      camera.position.set(0, 0, cameraDistance);
+    } catch {
+      return;
+    }
 
     const resize = () => {
       const width = container.clientWidth;
@@ -170,9 +183,8 @@ const Particles = ({
       depthTest: false,
     });
 
-    const particles = new Mesh(gl, { mode: gl.POINTS, geometry, program });
+    particles = new Mesh(gl, { mode: gl.POINTS, geometry, program });
 
-    let animationFrameId;
     let lastTime = performance.now();
     let elapsed = 0;
 
@@ -208,8 +220,8 @@ const Particles = ({
       if (moveParticlesOnHover) {
         container.removeEventListener("mousemove", handleMouseMove);
       }
-      cancelAnimationFrame(animationFrameId);
-      if (container.contains(gl.canvas)) {
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (gl?.canvas && container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }
     };
