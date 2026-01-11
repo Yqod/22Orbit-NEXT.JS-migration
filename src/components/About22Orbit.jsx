@@ -7,9 +7,9 @@ const About22Orbit = () => (
     <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-0 md:gap-20">
       {/* Mobile: Überschrift, Bild, Text */}
       <div className="block md:hidden w-full max-w-xl mx-auto text-center mb-12">
-        <h2 className="font-bebas text-4xl text-[#f0ebd8] font-bold tracking-widest drop-shadow-lg mb-6">
+        <div className="font-bebas text-4xl text-[#f0ebd8] font-bold tracking-widest drop-shadow-lg mb-6">
           Wer wir sind ? 
-        </h2>
+        </div>
        
         <p className="text-[#f0ebd8] text-lg font-light mb-6 leading-relaxed">
           <span className="font-bebas text-xl text-[#f0ebd8]">22Orbit</span> ist eine Webagentur im Herzen <span className="font-bebas text-xl text-[#f0ebd8]">Magdeburgs</span>,mit einer großen Liebe zur <span className="font-bebas text-xl text-[#f0ebd8]">Webentwicklung</span> und digitalen Innovation.

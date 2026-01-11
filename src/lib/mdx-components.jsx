@@ -4,8 +4,8 @@ import BlogImage from "../components/BlogImage.jsx";
 export const mdxComponents = {
   BlogImage,
   h1: (props) => (
-    <h1
-      className="text-white text-4xl md:text-5xl font-semibold tracking-tight mt-10 mb-6"
+    <h2
+      className="text-white text-3xl md:text-4xl font-semibold tracking-tight mt-10 mb-6"
       {...props}
     />
   ),

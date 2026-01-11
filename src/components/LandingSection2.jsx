@@ -174,18 +174,31 @@ const LandingSection2 = () => {
           <div className="inline-flex space-x-4 sm:space-x-6 md:space-x-8 pl-4 pr-4" style={{ width: 'max-content' }}>
             {/* Doppelte Items für nahtloses Looping */}
             {[...reasons, ...reasons].map((reason, index) => (
+              (() => {
+                const isDuplicate = index >= reasons.length;
+
+                return (
               <div 
                 key={`${reason.title}-${index}`} 
+                aria-hidden={isDuplicate ? "true" : undefined}
                 className="flex-shrink-0 w-72 sm:w-80 md:w-80 bg-[#3e5c76]/30 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#748cab]/20 hover:border-[#748cab]/50 hover:bg-[#3e5c76]/40 transition-all duration-300 hover:scale-105 select-none"
               >
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{reason.icon}</div>
-                <h3 className="font-bebas text-lg sm:text-xl text-[#f0ebd8] mb-2 sm:mb-3 tracking-wide">
-                  {reason.title}
-                </h3>
+                {isDuplicate ? (
+                  <div className="font-bebas text-lg sm:text-xl text-[#f0ebd8] mb-2 sm:mb-3 tracking-wide">
+                    {reason.title}
+                  </div>
+                ) : (
+                  <h3 className="font-bebas text-lg sm:text-xl text-[#f0ebd8] mb-2 sm:mb-3 tracking-wide">
+                    {reason.title}
+                  </h3>
+                )}
                 <p className="text-[#748cab] text-sm sm:text-base leading-relaxed">
                   {reason.description}
                 </p>
               </div>
+                );
+              })()
             ))}
           </div>
         </div>

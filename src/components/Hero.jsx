@@ -39,6 +39,10 @@ const Hero = () => {
                              <span className="font-bebas text-xl text-[#f0ebd8]">Webentwicklung</span> im Herzen <span className="font-bebas text-xl text-[#f0ebd8]">Magdeburgs</span> – von der <Link href="/webseiten" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">Homepage</Link> bis zur <Link href="/software" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">individuellen Software</Link>: Webdesign, Entwicklung und <Link href="/services" className="text-[#f0ebd8] hover:text-[#748cab] transition-colors">SEO</Link> aus einer Hand.
                                  </p>
 
+                                                        <p className="text-[#748cab] text-base font-light leading-relaxed">
+                                                            Webseiten aus Magdeburg, die begeistern – schnell, mobil und suchmaschinenfreundlich.
+                                                        </p>
+
                         </div>
 
                         <div className="mt-8 border-t-2 border-[#f0ebd8] lg:mt-12 sm:mt-20">
